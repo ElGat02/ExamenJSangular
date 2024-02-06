@@ -34,13 +34,13 @@
         <th>DNI</th>
         <th>Nombre</th>
         <th>Dirección</th>
-        <th>Saldo</th> <!-- Agrega la columna Saldo -->
+        <th>Saldo</th> 
     </tr>
     <tr *ngFor="let cli of clientes | async">
         <td>{{cli.codigo}}</td>
         <td>{{cli.dni}}</td>
         <td>{{cli.nombre}}</td>
         <td>{{cli.direccion}}</td>
-        <td>{{cli.saldo}}</td> <!-- Muestra el saldo -->
+        <td>{{cli.saldo}}</td> 
     </tr>
 </table>

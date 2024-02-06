@@ -24,9 +24,9 @@ export class ClientesService {
     return this.http.post<any>(url, recarga);
   }
 
-  // Método para obtener transferencias
+
   getTransferencias() {
-    const url = environment.WS_PATH + "/transferencias"; // Asegúrate de que esta URL coincida con tu endpoint de backend
+    const url = environment.WS_PATH + "/transferencias"; 
     return this.http.get<any>(url);
   }
 

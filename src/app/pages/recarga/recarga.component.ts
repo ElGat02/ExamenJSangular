@@ -9,7 +9,7 @@ import { ClientesService } from 'src/app/services/clientes.service';
 })
 export class RecargaComponent implements OnInit {
 
-  clientes: Cliente[] = []; // Inicializa como un arreglo vacío
+  clientes: Cliente[] = []; 
   clienteSeleccionado: number | undefined;
   
   recarga = {
@@ -38,7 +38,7 @@ export class RecargaComponent implements OnInit {
     this.clientesService.realizarRecarga(this.recarga).subscribe(
       response => {
         this.resultado = 'Recarga realizada con éxito: ' + response.mensaje;
-        // Actualiza la lista de clientes después de realizar la recarga si es necesario
+        
         this.ngOnInit();
       },
       error => {
