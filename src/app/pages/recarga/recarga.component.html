@@ -1,0 +1,32 @@
+<div class="container">
+    <h2>Formulario de Recarga</h2>
+    <form (ngSubmit)=" guardarRecarga()" #recargaForm="ngForm">
+        <div class="form-group">
+            <label for="cliente">Cliente:</label>
+            <select class="form-control" id="cliente" required [(ngModel)]="clienteSeleccionado" name="cliente">
+                <option *ngFor="let cli of clientes" [value]="cli.codigo">{{ cli.nombre }}</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="numeroMovil">Número de Teléfono:</label>
+            <input type="text" class="form-control" id="numeroMovil" required [(ngModel)]="recarga.numeroMovil" name="numeroMovil">
+        </div>
+
+        <div class="form-group">
+            <label for="operador">Operador:</label>
+            <input type="text" class="form-control" id="operador" required [(ngModel)]="recarga.operador" name="operador">
+        </div>
+
+        <div class="form-group">
+            <label for="monto">Monto:</label>
+            <input type="number" class="form-control" id="monto" required [(ngModel)]="recarga.monto" name="monto">
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="!recargaForm.form.valid">Recargar</button>
+    </form>
+
+    <div *ngIf="resultado">
+        <p>{{ resultado }}</p>
+    </div>
+</div>
