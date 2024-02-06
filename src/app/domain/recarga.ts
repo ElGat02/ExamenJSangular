@@ -1,7 +1,8 @@
 export class Recarga {
-    numero?: number;
+    
     operador?: string;
     numeroMovil?: string;
+    fecha?: Date;
     monto?: number;
 
     

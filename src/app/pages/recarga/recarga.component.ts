@@ -15,7 +15,8 @@ export class RecargaComponent implements OnInit {
   recarga = {
     numeroMovil: '',
     operador: '',
-    monto: ''
+    monto: '',
+    fecha: Date
   };
 
   resultado?: string;
@@ -41,6 +42,7 @@ export class RecargaComponent implements OnInit {
         this.ngOnInit();
       },
       error => {
+        console.error('Error en la recarga: ', error);
         this.resultado = 'Error en la recarga: ' + (error.error.mensaje || error.message);
       }
     );
